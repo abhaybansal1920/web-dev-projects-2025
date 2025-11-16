@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: #667a9a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            padding: 40px;
+            background: linear-gradient(135deg, #284c87 0%, #3d5a80 100%);
+            border: 4px solid rgb(229, 29, 3);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .container-text {
+            flex: 1;
+        }
+        
+        .container-image {
+            flex: 0 0 300px;
+        }
+
+        .container-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: rgb(255, 215, 0);
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+            font-weight: bolder;
+        }
+        
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #e0e0e0;
+        }
+        
+        h2:last-child {
+            color: rgb(255, 215, 0);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgb(229, 29, 3);
+            font-size: 20px;
+            margin-right: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 1000;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #667a9a;
+        }
+
+        .navbar a:hover {
+            color: rgb(66, 26, 118);
+            text-decoration: underline;
+            border-bottom: #6b8caf 2px solid;
+        }
+
+        #logo {
+            height: 50px;
+            margin-right: auto;
+            margin-left: 20px;
+            border-radius: 50%;
+        }
+
+        .photos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .photos img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .other {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .other h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img id="logo" src="big bang theory icon.png" alt="Show Icon" class="icon" />
+            <a href="characters.html">Characters</a>
+            <a href="funfacts.html">Fun Facts</a>
+            <a href="index.html">Home</a> 
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="container-text">
+            <h1>Hello, Everyone!</h1>
+            <h2>Baishali here. I have always liked this show because of its humor. I remember discovering it by chance on Comedy Central while flipping channels. I have always been able to relate to the character's awkwardness.</h2>
+            <h2>But now that I am away from home, those memories of watching this show with my sister after school really holds a special place in my heart.</h2>
+            <h2>If you are yet to watch this show, I highly recommend it!</h2>
+        </div>
+        <div class="container-image">
+            <img src="big bang theory icon.png" alt="Big Bang Theory">
+        </div>
+    </div>
+
+    <div class="other">
+        <h1>Here are some of my other recommendations-</h1> 
+        <div class="photos">
+            <img src="brooklyn.webp" width="200px" height="310px" alt="Brooklyn Nine-Nine">
+            <img src="friendslogo.webp" width="200px" alt="Friends">
+            <img src="young sheldon.jpeg" alt="Young Sheldon">
+            <img src="younger.jpeg" alt="Younger">
+        </div>   
+    </div>
+</body>
+</html>
