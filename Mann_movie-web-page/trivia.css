@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+}
+.back-link .material-symbols-outlined {
+    font-size: 48px;
+    color: #8B4513; 
+    transition: transform 0.2s;
+}
+.back-link .material-symbols-outlined:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+    color: #8B4513; 
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+.trivia-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.question-block {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.question {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.options-container label {
+    display: block;
+    padding: 12px 15px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.options-container label:hover {
+    background: #f0f0f0;
+}
+
+.options-container input[type="radio"] {
+    margin-right: 10px;
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #a0522d; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #8B4513; 
+}
+
+#results-container {
+    display: none; 
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.question-block.correct {
+    background-color: #e6f7e9; 
+    border-color: #5cb85c; 
+}
+
+.question-block.incorrect {
+    background-color: #fdeeee; 
+    border-color: #d9534f; 
+}
