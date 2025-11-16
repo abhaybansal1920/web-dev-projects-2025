@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Favourite Movie – Interstellar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Simple CSS, no frameworks, made for society activity -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0b1120;      /* dark bluish background */
+            color: #f9fafb;                 /* light text */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 15px 40px;
+        }
+
+        header {
+            background-color: #111827;
+            border-radius: 8px;
+            padding: 18px;
+            border: 1px solid #1f2937;
+        }
+
+        header h1 {
+            margin: 8px 0 5px;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 4px 0;
+            font-size: 14px;
+            color: #d1d5db;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        .meta {
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        .meta span {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            border: 1px solid #374151;
+            font-size: 12px;
+        }
+
+        nav {
+            margin-top: 12px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 6px;
+            padding: 5px 10px;
+            border-radius: 12px;
+            border: 1px solid #4b5563;
+            font-size: 13px;
+            text-decoration: none;
+            color: #e5e7eb;
+        }
+
+        nav a:hover{
+            background-color:#1f2937;
+        }
+
+        main {
+            margin-top: 18px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            border-left: 4px solid #f97316;   /* orange line */
+            padding-left: 8px;
+        }
+
+        .card {
+            background-color: #111827;
+            border-radius: 8px;
+            padding: 12px 14px;
+            border: 1px solid #1f2937;
+            font-size: 14px;
+        }
+
+        .card p {
+            margin-top: 4px;
+            margin-bottom: 6px;
+            color: #e5e7eb;
+        }
+
+        /* Simple two-column layout on bigger screens */
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .two-column > div {
+            flex: 1 1 280px;
+        }
+
+        /* Main characters grid */
+        .characters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .character {
+            background-color: #020617;
+            border: 1px solid #1f2937;
+            border-radius: 6px;
+            padding: 8px 10px;
+            flex: 1 1 220px;
+            font-size: 13px;
+        }
+
+        .character strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .actor {
+            color: #f97316;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        /* Gallery boxes */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery-item {
+            flex: 1 1 150px;
+            min-height: 90px;
+            border-radius: 6px;
+            border: 1px dashed #4b5563;
+            background-color: #020617;
+            font-size: 12px;
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 5px;
+        }
+
+        /* Trivia list */
+        .trivia-list {
+            padding-left: 18px;
+            margin: 6px 0;
+        }
+
+        .trivia-list li {
+            margin-bottom: 4px;
+        }
+
+        /* Simple poster + side info */
+        .poster-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .poster-box {
+            flex: 0 0 200px;
+        }
+
+        .poster {
+            width: 100%;
+            height: 280px;
+            border-radius: 8px;
+            border: 1px solid #4b5563;
+            background-color: #020617;
+            font-size: 12px;
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6px;
+        }
+
+        .poster-note {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-top: 6px;
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #9ca3af;
+            text-align: center;
+            border-top: 1px solid #1f2937;
+            padding-top: 10px;
+        }
+
+        /* I was testing this class for debugging borders but not using it finally */
+        .test-box{
+            border:1px solid red;
+        }
+
+        /* Responsive: stack columns on small screens */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            section h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="tagline">🎬 My Favourite Movie Webpage (BTCS Society Task)</div>
+            <h1>Interstellar (2014)</h1>
+            <p>
+                A science-fiction movie about space travel, black holes and the bond between a father and his daughter.
+            </p>
+
+            <div class="meta">
+                <span>Director: Christopher Nolan</span>
+                <span>Genre: Sci-Fi / Adventure</span>
+                <span>My Rating: ★★★★★</span>
+            </div>
+
+            <nav>
+                <a href="#about">About</a>
+                <a href="#characters">Main Characters</a>
+                <a href="#storyline">Storyline</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#trivia">Fun Trivia</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ABOUT + POSTER ROW -->
+            <section id="about">
+                <h2>About the Movie</h2>
+                <div class="card">
+                    <div class="two-column">
+                        <div>
+                            <p>
+                                <strong>Interstellar</strong> is set in a future where Earth is slowly dying because of dust storms and crop failure.
+                                A group of astronauts travel through a wormhole near Saturn to search for a new planet where humans can survive.
+                            </p>
+                            <p>
+                                I like this movie because it mixes real science (like black holes and time dilation) with emotions, family
+                                and sacrifice. I first watched it in school and then rewatched it in college. The background music and space visuals
+                                make it feel very grand and emotional.
+                            </p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Release Year: 2014</li>
+                                <li>Country: USA / UK</li>
+                                <li>Music: Hans Zimmer</li>
+                                <li>Theme: Survival, love, time and science</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="poster-row">
+                        <div class="poster-box">
+                            <div class="poster">
+                                <img src="interstellar-poster.jpg" alt="Interstellar Poster" width="100%">
+                            </div>
+                        </div>
+                        <div style="flex:1; font-size:13px; color:#d1d5db;">
+                            <p>
+                                This page is a simple static HTML and CSS project. There is no JavaScript used here.
+                                The focus is on basic layout, sections and simple styling that I can explain.
+                            </p>
+                            <p>
+                                I made it as a small society/club activity where we had to
+                                design a page about our favourite movie, so I picked Interstellar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MAIN CHARACTERS -->
+            <!-- I kept characters short so the page doesn't become too long -->
+            <section id="characters">
+                <h2>Main Characters</h2>
+                <div class="card">
+                    <p>These are some important characters from the movie and their roles:</p>
+
+                    <div class="characters">
+                        <div class="character">
+                            <strong>Joseph "Cooper" Cooper</strong>
+                            <div class="actor">Matthew McConaughey</div>
+                            <p>
+                                A former NASA pilot who becomes a farmer. He joins the space mission
+                                to find a new home for humans, but has to leave his children behind.
+                            </p>
+                        </div>
+
+                        <div class="character">
+                            <strong>Murphy "Murph" Cooper</strong>
+                            <div class="actor">Mackenzie Foy / Jessica Chastain</div>
+                            <p>
+                                Cooper’s daughter. She believes her father will return. She later becomes
+                                a scientist and works on solving equations to save humanity.
+                            </p>
+                        </div>
+
+                        <div class="character">
+                            <strong>Dr. Amelia Brand</strong>
+                            <div class="actor">Anne Hathaway</div>
+                            <p>
+                                A scientist and astronaut in the mission. She believes love can be a powerful
+                                guiding force, even across time and space.
+                            </p>
+                        </div>
+
+                        <div class="character">
+                            <strong>TARS</strong>
+                            <div class="actor">Voice: Bill Irwin</div>
+                            <p>
+                                A rectangular, flexible robot who helps with calculations and mission tasks.
+                                Also provides humour because of his adjustable "humour setting".
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STORYLINE -->
+            <section id="storyline">
+                <h2>Storyline (Short Summary)</h2>
+                <div class="card">
+                    <p>
+                        Earth is facing a serious food crisis because crops are failing and dust storms are common.
+                        Cooper is secretly contacted by NASA and asked to pilot a mission through a wormhole to find
+                        habitable planets in another galaxy.
+                    </p>
+                    <p>
+                        The team visits different planets, each with extreme conditions. Due to the strong gravity
+                        near the black hole, time runs slower for them than on Earth. This means that a few hours for
+                        them can be many years on Earth, which creates emotional distance between Cooper and his family.
+                    </p>
+                    <p>
+                        In the end, the movie talks about the importance of love, human connection and hope, along with
+                        scientific ideas like gravity and dimensions beyond the normal three we see.
+                    </p>
+                </div>
+            </section>
+
+            <!-- GALLERY -->
+            <section id="gallery">
+                <h2>Gallery (Scenes I Like)</h2>
+                <div class="card">
+                    <p>
+                        Below I have added a few images related to the movie. These are just basic <code>&lt;img&gt;</code> tags
+                        placed inside flex boxes.
+                    </p>
+
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="interstellar-poster.jpg" alt="Interstellar Poster" width="100%">
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="spaceship.webp" alt="Spaceship Image" width="100%" height="250">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Cooper and Murph in the farmhouse.jpg" alt="Cooper and Murph together" width="100%" height="100%">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="gargantua.jpg" alt="Gargantua Blackhole" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FUN TRIVIA -->
+            <section id="trivia">
+                <h2>Fun Trivia</h2>
+                <div class="card">
+                    <p>Some interesting facts about Interstellar:</p>
+                    <ul class="trivia-list">
+                        <li>
+                            The appearance of the black hole "Gargantua" in the movie is based on actual physics
+                            equations from physicist Kip Thorne.
+                        </li>
+                        <li>
+                            Time moves slower near the black hole. In the water planet scene, one hour equals
+                            about seven years on Earth (time dilation).
+                        </li>
+                        <li>
+                            The background music (especially the organ sounds) was used to create a feeling of
+                            emptiness, mystery and spirituality in space.
+                        </li>
+                        <li>
+                            The robot TARS looks very simple in shape but is different from the usual humanoid robots
+                            shown in most sci-fi movies.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Favourite Movie Page - Interstellar | Created by Abhay Bansal, 1st Year CSE, BTCS Tech Member, TIET Derabassi
+        </footer>
+    </div>
+</body>
+</html>
